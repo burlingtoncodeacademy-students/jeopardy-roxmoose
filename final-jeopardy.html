@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Final Jeopardy</title>
-</head>
-<body>
-  <h1>Final Jeopardy</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Final Jeopardy</title>
+  </head>
+  <body>
+    <header>
+      <h2 id="grow-shrink-h2">Final Jeopardy!</h2>
+    </header>
+
+    <div id="flex-final">
+      <div id="final-cat" class="final-item">Category Name</div>
+
+      <div class="final-item">
+        
+          Your Turn, <span id="player-name">Maude</span>
+        </div>
+
+        <div id="grid-final-2">
+
+          <div class="final-2-item">
+            Answer:
+            </div>
+
+            <div class="final-2-item">
+              <input type="text" id="guess" placeholder="What is..." />
+            </div>
+
+            <div class="final-2-item">
+              Amount:
+            </div>
+
+          <div class="final-2-item">
+            <input type="text" id="amount" placeholder="$" />
+          </div>
+
+        </div>
+
+        <div class="final-item">
+          <a class="button-big" href="https://www.youtube.com/watch?v=Z2EotmVUdDE">BET!</a>
+        </div>
+
+      </div>
+    </div>
+  </body>
 </html>

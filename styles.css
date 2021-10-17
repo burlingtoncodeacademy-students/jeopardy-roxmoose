@@ -1,0 +1,395 @@
+* {
+    background-color: #CDEDF6;
+    font-family: 'Tahoma';
+    font-size: 20px;
+}
+
+p {
+    margin: 5px;
+}
+
+header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 50px;
+    color: #042A2B;
+    text-shadow: 2px 2px #5EB1BF;
+}
+
+h2 {
+    font-size: 50px;
+    color: #042A2B;
+    font-family: Impact;
+    letter-spacing: .04em;
+    margin: 0;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #5EB1BF;
+}
+
+#grow-shrink-h2 {
+    animation-name: grow-shrink-h2;
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+}
+
+@keyframes grow-shrink-h2 {
+    0% {
+        transform: translateY(0);
+        font-size: 0.5em;
+    }
+    33% {
+        transform: translateY(-5px);
+    }
+    66% {
+        transform: translateY(5px);
+        font-size: 4em;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+h4 {
+    margin: 5px;
+    font-size: 20px
+}
+
+#player-name {
+    font-weight: bold;
+}
+
+#score {
+    background-color: black;
+    color: greenyellow;
+    padding: 5px;
+}
+
+#flex-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-item {
+    margin: 10px;
+}
+
+#flex-rounds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#flex-guess {
+    display: flex;
+    flex-direction: row;
+}
+
+#flex-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#grid-final-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 35px 35px;
+}
+
+.final-2-item {
+    padding: 5px;
+}
+
+.guess-item-score {
+    margin: 10px 40px 0px 40px;
+    /* background-color: #5EB1BF;
+    border: 4px dashed black; */
+    color: black;
+    padding: 5px;
+    width: 175px;
+    height: 75px;
+    display: inline-grid;
+    align-items: center;
+    text-align: center;
+}
+
+.guess-item {
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+#final-cat {
+    margin-top: 40px;
+    padding: 30px;
+    color: white;
+    background-color: #042A2B;
+    border: 5px solid #5EB1BF;
+    font-weight: bold;
+}
+
+.final-item {
+    padding: 20px;
+    
+}
+
+#grid {
+    display: grid;
+    min-width: 900px;
+    grid-template-columns: repeat(6, 170px);
+    grid-template-rows: repeat(6, 65px);
+    border: 8px solid #5EB1BF;
+}
+
+.grid-item-cat {
+    display: inline-grid;
+    align-items: center;
+    border: 1px dashed #5EB1BF;
+    border-bottom: 2px solid #5EB1BF;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background-color: #042A2B;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.grid-item-100 {
+    display: inline-grid;
+    align-items: center;
+    border: 1px dashed #5EB1BF;
+    border-top: 1px solid #5EB1BF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact;
+    color: #f1d8cc;
+    background-color: #042A2B;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-delay: 0.25s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.grid-item-200 {
+    display: inline-grid;
+    align-items: center;
+    border: 1px dashed #5EB1BF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact;
+    color: #f1bea7;
+    background-color: #042A2B;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.grid-item-300 {
+    display: inline-grid;
+    align-items: center;
+    border: 1px dashed #5EB1BF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact;
+    color: #f1a17c;
+    background-color: #042A2B;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-delay: 0.75s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.grid-item-400 {
+    display: inline-grid;
+    align-items: center;
+    border: 1px dashed #5EB1BF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact;
+    color: #ee7943;
+    background-color: #042A2B;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.grid-item-500 {
+    display: inline-grid;
+    align-items: center;
+    border: 1px dashed #5EB1BF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact;
+    color: #f05209;
+    background-color: #042A2B;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-delay: 1.25s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+
+.button-big {
+    display: inline-block;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #5eb1bf;
+    border: 4px solid #2c2b28;
+    border-radius: 8px;
+    font-size: 30px;
+    letter-spacing: .1em;
+    font-family: Impact;
+    color: #2c2b28;
+    box-shadow: 2px 2px #2c2b28;
+}
+
+#bounce-grow-button {
+    animation-name: bounce-grow-button;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-iteration-count: 6;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+@keyframes bounce-grow-button {
+    0% {
+        transform: translateY(0);
+    }
+    33% {
+        transform: translateY(-5px)
+    }
+    50% {
+        padding: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    66% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.button-big:hover {
+    background-color: #EF7B45;
+}
+
+.button-guess {
+    display: inline-block;
+    width: 80px;
+    padding: 5px;
+    border: 3px solid #042A2B;
+    background-color: #5eb1bf;
+    border-radius: 6px;
+    font-size: 22px;
+    letter-spacing: .1em;
+    font-family: Impact;
+    color: #042A2B;
+    text-align: center;
+}
+
+.button-guess:hover {
+    background-color: #ee7943;
+}
+
+.button-pass {
+    display: inline-block;
+    width: 80px;
+    padding: 5px;
+    border: 3px solid #5eb1bf;
+    border-radius: 6px;
+    font-size: 22px;
+    letter-spacing: .1em;
+    font-family: Impact;
+    color: #5eb1bf;
+    background-color: rgb(255, 255, 255, 0.25);
+    text-align: center;
+}
+
+.button-pass:hover {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #042A2B;
+}
+
+.next-page-link {
+    text-align: right;
+}
+
+.next-page-link:link {
+    text-decoration: none;
+    color: #042A2B;
+}
+
+.next-page-link:visited {
+    text-decoration: none;
+    color: #5eb1bf;
+}
+
+input {
+    border: 2px solid #042A2B;
+    background-color: white;
+}
+
+#fade-in {
+    animation-name: fade-in;
+    animation-duration: 4s;
+    animation-delay: 0.25s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.rounds-item:nth-of-type(3) {
+    display: inline-grid;
+    width: 1020px;
+    align-items: right;
+}

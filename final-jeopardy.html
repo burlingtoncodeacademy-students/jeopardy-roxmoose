@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>Final Jeopardy</title>
   </head>
   <body>
@@ -13,38 +13,63 @@
     </header>
 
     <div id="flex-final">
-      <div id="final-cat" class="final-item">Category Name</div>
+
+      <div id="final-scores" class="final-item">
+        <p>
+        Player 1 score: $<span id="p1score"></span>
+      </p><p>
+        Player 2 score: $<span id="p2score"></span>
+      </p>
+      </div>
+
+      <div id="final-question" class="final-item">Parks & Rec</div>
 
       <div class="final-item">
-        
-          Your Turn, <span id="player-name">Maude</span>
-        </div>
 
-        <div id="grid-final-2">
+        <form id="wager-form">
+          Players, please make a wager up to your maximum point value.
+          <p>
+          Player 1: <input style="width: 100px" type="number" id="p1wager-input" placeholder="$"/>
+        </p><p>
+          Player 2: <input style="width: 100px" type="number" id="p2wager-input" placeholder="$"/>
+        </p>
+        <p>
+        <button class="button-guess" id="wager-button">Wage!</button>
+      </p>
+        </form>
 
-          <div class="final-2-item">
-            Answer:
-            </div>
 
-            <div class="final-2-item">
-              <input type="text" id="guess" placeholder="What is..." />
-            </div>
+        <p>
+        Player 1 waged $<span id="p1wager"></span>
+      </p><p>
+        Player 2 waged $<span id="p2wager"></span>
+      </p>
 
-            <div class="final-2-item">
-              Amount:
-            </div>
-
-          <div class="final-2-item">
-            <input type="text" id="amount" placeholder="$" />
-          </div>
-
-        </div>
-
-        <div class="final-item">
-          <a class="button-big" href="https://www.youtube.com/watch?v=Z2EotmVUdDE">BET!</a>
-        </div>
-
-      </div>
+      <form id="final-form">
+        <p>
+        Players, please enter your answers.
+      </p><p>
+        Player 1: <input style="width: 100px" type="text" id="p1final-input" placeholder="What is..."/>
+      </p><p>
+        Player 2: <input style="width: 100px" type="text" id="p2final-input" placeholder="What is..."/>
+      </p>
+      <p>
+      <button class="button-guess" id="final-button">Bet!</button>
+    </p>
+      </form>
+<div id="final-answers">
+      <p>
+        Player 1 answered: <span id="p1final"></span>
+      </p><p>
+        Player 2 answered: <span id="p2final"></span>
+      </p>
     </div>
+
+    <div id="winner"></div>
+
+
+
+    </div>
+    <script src="scripts/final.js"></script>
   </body>
 </html>

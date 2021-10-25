@@ -1,0 +1,1 @@
+document.location.hash = "2player" // Story 1 - adding a fragment idenifying the game as 2-player

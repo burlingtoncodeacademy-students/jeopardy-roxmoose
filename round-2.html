@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>Double Jeopardy</title>
   </head>
   <body>
@@ -61,13 +61,13 @@
         <div id="flex-guess">
           <!-- guess-item 1 -->
           <div class="guess-item-score">
-            <span id="player-name">Maude:</span><span id="score">$12,500</span>
+            <span class="player-name">Player 1:</span><span class="score" id="p1score">$0</span>
           </div>
           <!-- guess-item 2 -->
           <div class="guess-item">
             <form>
               <label for="guess"
-                >Your Turn, <span id="player-name">Harold</span></label
+                >Your Turn, <span class="player-name" id="active-player"></span></label
               >
               <p>
                 <input type="text" id="guess" placeholder="What is..." />
@@ -82,7 +82,7 @@
           </div>
           <!-- guess-item 3 -->
           <div class="guess-item-score">
-            <span id="player-name">Harold:</span><span id="score">$9,800</span>
+            <span class="player-name">Player 1:</span><span class="score" id="p2score">$0</span>
           </div>
         </div>
         <!-- End of FLEX-GUESS CONTAINER ********************************************* -->

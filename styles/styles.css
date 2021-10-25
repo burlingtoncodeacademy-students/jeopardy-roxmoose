@@ -1,6 +1,7 @@
+/**************** GENERAL ****************/
 * {
     background-color: #CDEDF6;
-    font-family: 'Tahoma';
+    font-family: 'Gill Sans';
     font-size: 20px;
 }
 
@@ -13,6 +14,7 @@ header {
     text-align: center;
 }
 
+/**************** HOME PAGE TITLE ****************/
 h1 {
     font-family: Verdana;
     font-weight: bold;
@@ -21,6 +23,7 @@ h1 {
     text-shadow: 2px 2px #5EB1BF;
 }
 
+/**************** OTHER PAGE TITLES ****************/
 h2 {
     font-size: 50px;
     color: #042A2B;
@@ -62,16 +65,8 @@ h4 {
     font-size: 20px
 }
 
-#player-name {
-    font-weight: bold;
-}
 
-#score {
-    background-color: black;
-    color: greenyellow;
-    padding: 5px;
-}
-
+/**************** PAGE FLEXBOXES & THEIR ITEMS ****************/
 #flex-home {
     display: flex;
     flex-direction: column;
@@ -86,6 +81,12 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.rounds-item:nth-of-type(3) {
+    display: inline-grid;
+    width: 1020px;
+    align-items: right;
 }
 
 #flex-guess {
@@ -127,7 +128,7 @@ h4 {
     text-align: center;
 }
 
-#final-cat {
+#final-question {
     margin-top: 40px;
     padding: 30px;
     color: white;
@@ -141,6 +142,7 @@ h4 {
     
 }
 
+/**************** THE BOARD. Each grid item is a row. ****************/
 #grid {
     display: grid;
     min-width: 900px;
@@ -260,7 +262,29 @@ h4 {
     animation-direction: normal;
 }
 
+/******* BOARD ANIMATION: each row fades in *******/
 
+#fade-in {
+    animation-name: fade-in;
+    animation-duration: 4s;
+    animation-delay: 0.25s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/**************** BUTTONS ****************/
+/* PLAY BUTTON */
 .button-big {
     display: inline-block;
     padding: 10px;
@@ -276,6 +300,7 @@ h4 {
     box-shadow: 2px 2px #2c2b28;
 }
 
+/* it bounces and grows! */
 #bounce-grow-button {
     animation-name: bounce-grow-button;
     animation-duration: 1s;
@@ -285,6 +310,7 @@ h4 {
     animation-direction: normal;
 }
 
+/* this is how it bounces and grows over time! Bounces via translateY and grows via padding */
 @keyframes bounce-grow-button {
     0% {
         transform: translateY(0);
@@ -311,7 +337,7 @@ h4 {
 
 .button-guess {
     display: inline-block;
-    width: 80px;
+    width: 90px;
     padding: 5px;
     border: 3px solid #042A2B;
     background-color: #5eb1bf;
@@ -327,9 +353,14 @@ h4 {
     background-color: #ee7943;
 }
 
+.button-guess:disabled {
+    opacity: 50%;
+    background-color: gray;
+}
+
 .button-pass {
     display: inline-block;
-    width: 80px;
+    width: 90px;
     padding: 5px;
     border: 3px solid #5eb1bf;
     border-radius: 6px;
@@ -343,6 +374,24 @@ h4 {
 
 .button-pass:hover {
     background-color: white;
+}
+
+.button-pass:disabled {
+    opacity: 50%;
+    background-color: gray;
+}
+
+
+/**************** MISC LITTLE FORMATTING ****************/
+
+.player-name {
+    font-weight: bold;
+}
+
+.score {
+    background-color: black;
+    color: greenyellow;
+    padding: 5px;
 }
 
 a {
@@ -369,27 +418,7 @@ input {
     background-color: white;
 }
 
-#fade-in {
-    animation-name: fade-in;
-    animation-duration: 4s;
-    animation-delay: 0.25s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    animation-direction: normal;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.rounds-item:nth-of-type(3) {
-    display: inline-grid;
-    width: 1020px;
-    align-items: right;
+#winner {
+    font-family: 'Impact';
+    font-size: 40px;
 }

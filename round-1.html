@@ -1,12 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeopardy</title>
-</head>
-<body>
-  <h1>Round One</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Jeopardy</title>
+  </head>
+  <body>
+    <header>
+      <h2>Jeopardy!</h2>
+    </header>
+    <div class="timer">Round Timer: <span id="round-timer"></span> seconds</div>
+    <div class="timer">Turn Timer: <span id="turn-timer"></span> seconds</div>
+
+    <!-- ************************** FLEX-ROUNDS CONTAINER ************************** -->
+    <div id="flex-rounds">
+      <!-- rounds-item A: grid -->
+      <div id="grid" class="rounds-item">
+        <!-- card IDs are in the form of round#, row#, col# -->
+        <div class="grid-item-cat">Cat 1</div>
+        <div class="grid-item-cat">Cat 2</div>
+        <div class="grid-item-cat">Cat 3</div>
+        <div class="grid-item-cat">Cat 4</div>
+        <div class="grid-item-cat">Cat 5</div>
+        <div class="grid-item-cat">Cat 6</div>
+        <div class="grid-item-100" id="010101">$100</div>
+        <div class="grid-item-100" id="010102">$100</div>
+        <div class="grid-item-100" id="010103">$100</div>
+        <div class="grid-item-100" id="010104">$100</div>
+        <div class="grid-item-100" id="010105">$100</div>
+        <div class="grid-item-100" id="010106">$100</div>
+        <div class="grid-item-200" id="010201">$200</div>
+        <div class="grid-item-200" id="010202">$200</div>
+        <div class="grid-item-200" id="010203">$200</div>
+        <div class="grid-item-200" id="010204">$200</div>
+        <div class="grid-item-200" id="010205">$200</div>
+        <div class="grid-item-200" id="010206">$200</div>
+        <div class="grid-item-300" id="010301">$300</div>
+        <div class="grid-item-300" id="010302">$300</div>
+        <div class="grid-item-300" id="010303">$300</div>
+        <div class="grid-item-300" id="010304">$300</div>
+        <div class="grid-item-300" id="010305">$300</div>
+        <div class="grid-item-300" id="010306">$300</div>
+        <div class="grid-item-400" id="010401">$400</div>
+        <div class="grid-item-400" id="010402">$400</div>
+        <div class="grid-item-400" id="010403">$400</div>
+        <div class="grid-item-400" id="010404">$400</div>
+        <div class="grid-item-400" id="010405">$400</div>
+        <div class="grid-item-400" id="010406">$400</div>
+        <div class="grid-item-500" id="010501">$500</div>
+        <div class="grid-item-500" id="010502">$500</div>
+        <div class="grid-item-500" id="010503">$500</div>
+        <div class="grid-item-500" id="010504">$500</div>
+        <div class="grid-item-500" id="010505">$500</div>
+        <div class="grid-item-500" id="010506">$500</div>
+      </div>
+      <!-- End of rounds-item A -->
+
+      <!-- rounds-item B: Name, guess, & guess/pass buttons -->
+      <div class="rounds-item">
+        <!-- ************************** FLEX-GUESS CONTAINER (nested) *************** -->
+        <div id="flex-guess">
+          <!-- guess-item 1 -->
+          <div class="guess-item-score">
+            <span class="player-name">Player 1:</span
+            >
+            <div class="score">$<span class="score" id="p1score">0</span></div>
+          </div>
+
+          <!-- guess-item 2 -->
+          <div class="guess-item">
+            <form id="form">
+              <label for="guess"
+                >Your Turn, <span class="player-name" id="active-player"></span
+              ></label>
+              <p>
+                <input type="text" id="guess" placeholder="What is..." />
+              </p>
+            
+            <p>
+              <button
+                class="button-guess"
+                id="guess-button"
+              >
+                GUESS
+              </button>
+            
+              <button
+                class="button-pass"
+                id="pass-button"
+              >
+                PASS
+              </button>
+            </form>
+            <!-- I feel like the Pass button shouldn't be part of the form, as it doesn't apply if a player puts in an answer, but if I have it outside the form it goes onto the next line. Maybe there's a way to prevent it from going to the next line, but right now everything seems to work fine with it inside. We'll see if that continues.... -->
+            </p>
+          </div>
+
+          <!-- guess-item 3 -->
+          <div class="guess-item-score">
+            <span class="player-name">Player 2:</span
+            ><div class="score">$<span class="score" id="p2score">0</span></div>
+          </div>
+        </div>
+        <!-- End of FLEX-GUESS CONTAINER ********************************************* -->
+      </div>
+
+      <!-- rounds-item C: Double Jeopardy link ******************* -->
+      <div class="rounds-item">
+        <a href="round-2.html" class="next-page-link">Go to Double Jeopardy!</a>
+      </div>
+    </div>
+    <!-- End of FLEX-ROUNDS CONTAINER ************************************************* -->
+    <script src="scripts/round-1.js"></script>
+  </body>
 </html>

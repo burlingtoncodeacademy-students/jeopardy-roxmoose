@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeopardy</title>
-</head>
-<body>
-  <h1>Double Jeopardy</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Double Jeopardy</title>
+  </head>
+  <body>
+    <header>
+      <h2> Double Jeopardy!</h2>
+    </header>
+
+    <!-- ************************** FLEX-ROUNDS CONTAINER ************************** -->
+    <div id="flex-rounds">
+      <!-- rounds-item A: grid -->
+      <div id="grid" class="rounds-item">
+        <div class="grid-item-cat">Halloween</div>
+        <div class="grid-item-cat">Wood</div>
+        <div class="grid-item-cat">American Folklore</div>
+        <div class="grid-item-cat">Transportation</div>
+        <div class="grid-item-cat">Eastern Europe</div>
+        <div class="grid-item-cat">Herbal Medicine</div>
+        <div class="grid-item-100">$200</div>
+        <div class="grid-item-100">$200</div>
+        <div class="grid-item-100">$200</div>
+        <div class="grid-item-100">$200</div>
+        <div class="grid-item-100">$200</div>
+        <div class="grid-item-100">$200</div>
+        <div class="grid-item-200">$400</div>
+        <div class="grid-item-200">$400</div>
+        <div class="grid-item-200">$400</div>
+        <div class="grid-item-200">$400</div>
+        <div class="grid-item-200">$400</div>
+        <div class="grid-item-200">$400</div>
+        <div class="grid-item-300">$600</div>
+        <div class="grid-item-300">$600</div>
+        <div class="grid-item-300">$600</div>
+        <div class="grid-item-300">$600</div>
+        <div class="grid-item-300">$600</div>
+        <div class="grid-item-300">$600</div>
+        <div class="grid-item-400">$800</div>
+        <div class="grid-item-400">$800</div>
+        <div class="grid-item-400">$800</div>
+        <div class="grid-item-400">$800</div>
+        <div class="grid-item-400">$800</div>
+        <div class="grid-item-400">$800</div>
+        <div class="grid-item-500">$1000</div>
+        <div class="grid-item-500">$1000</div>
+        <div class="grid-item-500">$1000</div>
+        <div class="grid-item-500">$1000</div>
+        <div class="grid-item-500">$1000</div>
+        <div class="grid-item-500">$1000</div>
+      </div>
+      <!-- End of rounds-item A -->
+
+      <!-- rounds-item B: Name, guess, & guess/pass buttons -->
+      <div class="rounds-item">
+        <!-- ************************** FLEX-GUESS CONTAINER (nested) *************** -->
+        <div id="flex-guess">
+          <!-- guess-item 1 -->
+          <div class="guess-item-score">
+            <span class="player-name">Player 1:</span><span class="score" id="p1score">$0</span>
+          </div>
+          <!-- guess-item 2 -->
+          <div class="guess-item">
+            <form>
+              <label for="guess"
+                >Your Turn, <span class="player-name" id="active-player"></span></label
+              >
+              <p>
+                <input type="text" id="guess" placeholder="What is..." />
+              </p>
+            </form>
+            <p>
+              <a class="button-guess" href="https://www.youtube.com/watch?v=-imG6CNF9kI&list=WL&index=2"
+                >GUESS</a
+              >
+              <a class="button-pass" href="https://www.instagram.com/p/COigbGyhK7M/">PASS</a>
+            </p>
+          </div>
+          <!-- guess-item 3 -->
+          <div class="guess-item-score">
+            <span class="player-name">Player 1:</span><span class="score" id="p2score">$0</span>
+          </div>
+        </div>
+        <!-- End of FLEX-GUESS CONTAINER ********************************************* -->
+      </div>
+      
+      <!-- rounds-item C: Double Jeopardy link ******************* -->
+      <div class="rounds-item">
+        <a href="final-jeopardy.html" class="next-page-link">Go to Final Jeopardy!</a>
+      </div>
+    </div>
+    <!-- End of FLEX-ROUNDS CONTAINER ************************************************* -->
+  </body>
 </html>

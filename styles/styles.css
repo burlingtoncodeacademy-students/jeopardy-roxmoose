@@ -34,6 +34,7 @@ h2 {
     text-shadow: 1px 1px #5EB1BF;
 }
 
+/* Animation settings for H2 titles */
 #grow-shrink-h2 {
     animation-name: grow-shrink-h2;
     animation-duration: 1s;
@@ -43,6 +44,8 @@ h2 {
     animation-direction: normal;
 }
 
+/* Timing for H2 title animations */
+/* font size grows and shrinks, and the translate setting makes it move down then up */
 @keyframes grow-shrink-h2 {
     0% {
         transform: translateY(0);
@@ -60,46 +63,48 @@ h2 {
     }
 }
 
-h4 {
-    margin: 5px;
-    font-size: 20px
-}
 
-
-/**************** PAGE FLEXBOXES & THEIR ITEMS ****************/
+/**************** PAGE LAYOUTS WITH FLEXBOXES ****************/
+/* Flex container for HOME page */
 #flex-home {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Flex item for HOME page */
 .home-item {
     margin: 10px;
 }
 
+/* Flex container for ROUND 1 and ROUND 2 page layouts */
 #flex-rounds {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Making the link to the next page at the bottom right */
 .rounds-item:nth-of-type(3) {
     display: inline-grid;
     width: 1020px;
     align-items: right;
 }
 
+/* A nested flexbox container (within #flex-rounds) for both players' scores and for the guess input form */
 #flex-guess {
     display: flex;
     flex-direction: row;
 }
 
+/* Flex container for FINAL JEOPARDY page layout */
 #flex-final {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* 
 #grid-final-2 {
     display: grid;
     grid-template-columns: auto auto;
@@ -108,12 +113,11 @@ h4 {
 
 .final-2-item {
     padding: 5px;
-}
+} */
 
+/* layout for score boxes (in the #flex-guess container)*/
 .guess-item-score {
     margin: 10px 40px 0px 40px;
-    /* background-color: #5EB1BF;
-    border: 4px dashed black; */
     color: black;
     padding: 5px;
     width: 175px;
@@ -123,11 +127,13 @@ h4 {
     text-align: center;
 }
 
+/* layout for general #flex-guess items */
 .guess-item {
     margin: 10px 10px 10px 10px;
     text-align: center;
 }
 
+/* Creating a box where the final question is shown in Final Jeopardy */
 #final-question {
     margin-top: 40px;
     padding: 30px;
@@ -137,12 +143,14 @@ h4 {
     font-weight: bold;
 }
 
+/* Layout for general items in the flexbox on the Final Jeopardy page */
 .final-item {
     padding: 20px;
     
 }
 
 /**************** THE BOARD. Each grid item is a row. ****************/
+/* Grid layout */
 #grid {
     display: grid;
     min-width: 900px;
@@ -151,6 +159,7 @@ h4 {
     border: 8px solid #5EB1BF;
 }
 
+/* Styling for category boxes (top row of grid) */
 .grid-item-cat {
     display: inline-grid;
     align-items: center;
@@ -171,6 +180,7 @@ h4 {
     animation-direction: normal;
 }
 
+/* Styling for non-category grid rows. Split by row in order to do cool fade-in animation when page first loads. Everything is the same between these except for animation-delay (increases) */
 .grid-item-100 {
     display: inline-grid;
     align-items: center;
@@ -262,16 +272,16 @@ h4 {
     animation-direction: normal;
 }
 
-/******* BOARD ANIMATION: each row fades in *******/
+/******* BOARD ANIMATION: each row fades in (opacity from 0 to 1) *******/
 
-#fade-in {
+/* #fade-in {
     animation-name: fade-in;
     animation-duration: 4s;
     animation-delay: 0.25s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-direction: normal;
-}
+} */
 
 @keyframes fade-in {
     0% {
@@ -283,8 +293,9 @@ h4 {
     }
 }
 
-/**************** BUTTONS ****************/
-/* PLAY BUTTON */
+/**************** BUTTON STYLING ****************/
+
+/* PLAY BUTTON on home page */
 .button-big {
     display: inline-block;
     padding: 10px;
@@ -331,10 +342,12 @@ h4 {
     }
 }
 
+/* Styling for when play button is hovered over */
 .button-big:hover {
     background-color: #EF7B45;
 }
 
+/* Styling for GUESS button */
 .button-guess {
     display: inline-block;
     width: 90px;
@@ -349,15 +362,18 @@ h4 {
     text-align: center;
 }
 
+/* Styling when hovering over GUESS button */
 .button-guess:hover {
     background-color: #ee7943;
 }
 
+/* Styling when GUESS button is disabled (grayed out) */
 .button-guess:disabled {
     opacity: 50%;
     background-color: gray;
 }
 
+/* Styling for PASS button */
 .button-pass {
     display: inline-block;
     width: 90px;
@@ -372,10 +388,12 @@ h4 {
     text-align: center;
 }
 
+/* Styling when hovering over PASS button */
 .button-pass:hover {
     background-color: white;
 }
 
+/* Styling when PASS button is disabled */
 .button-pass:disabled {
     opacity: 50%;
     background-color: gray;
@@ -384,21 +402,25 @@ h4 {
 
 /**************** MISC LITTLE FORMATTING ****************/
 
+/* Any time a player's name is shown, it's bolded */
 .player-name {
     font-weight: bold;
 }
 
+/* Score display boxes */
 .score {
     background-color: black;
     color: greenyellow;
     padding: 5px;
 }
 
+/* Making link default style plain */
 a {
     text-decoration: none;
     color: #042A2B;
 }
 
+/* Styling for link that brings you to next page */
 .next-page-link {
     text-align: right;
 }
@@ -413,11 +435,13 @@ a {
     color: #5eb1bf;
 }
 
+/* Styling for form input boxes (for guessing/waging) */
 input {
     border: 2px solid #042A2B;
     background-color: white;
 }
 
+/* Styling when for game outcome (Player X won! or It's a tie! */
 #winner {
     font-family: 'Impact';
     font-size: 40px;

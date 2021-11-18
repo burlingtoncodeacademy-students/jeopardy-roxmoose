@@ -32,7 +32,7 @@ roundCountdown();
 grid.addEventListener("click", (event) => {
   gridEventCount += 1; // this is how I'm going to figure out if all 30 tiles have been clicked (and thus redirect to the next round)
   console.log("gridEventCount: ", gridEventCount);
-  // activeID = the ID of the clicked card"
+  // activeID = the ID of the clicked card
   activeID = event.target.id; // e.g. 010101
   console.log("card ID: ", activeID);
   // Takes the card ID from html page:
@@ -74,7 +74,7 @@ grid.addEventListener("click", (event) => {
       p1score.textContent = p1score.value;
       console.log("p1score.textContent: ", p1score.textContent);
       console.log("event.target.textContent in 1: ", event.target.textContent);
-      event.target.textContent = ""; // clear the card
+      event.target.textContent = ""; // clear the card. if this event listener isn't inside the other one and we can't use event.target, how would we target that
       console.log(
         "event.target.textContent in 1 after clear: ",
         event.target.textContent
